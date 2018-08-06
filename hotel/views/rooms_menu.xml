@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+   
+	<act_window id="room_view" name="Room" res_model="ba.rooms" view_mode="tree,form"  />
+	<act_window id="customer_view" name="Customer" res_model="res.company" view_mode="tree,form" />
+	<act_window id="floor_view" name="Floor" res_model="ba.floor" view_mode="tree,form" />
+	<act_window id="section_view" name="Section" res_model="ba.section" view_mode="tree,form"/>
+	<act_window id="amenities_view" name="Amenities" res_model="ba.amenities" view_mode="tree,form"/>
+	<act_window id="facilities_view" name="Facilities" res_model="ba.facilities" view_mode="tree,form"/>
+	<act_window id="room_type_view" name="Room Type" res_model="ba.room.type" view_mode="tree,form"/>
+	<act_window id="rate_type_view" name="Rate Type" res_model="ba.rate.type" view_mode="tree,form"/>
+	<act_window id="night_audit_view" name="Night Audit" res_model="ba.night.audit" view_mode="tree,form" />
+	<act_window id="packages_view" name="Package" res_model="ba.packages" view_mode="tree,form" />
+	<act_window id="hotel_settings_view" name="Hotel Settings" res_model="ba.hotel.settings" view_mode="form"  target="inline"/>
+	<act_window id="cancellation_policies_view" name="Cancellation Policies" res_model="ba.cancellation.policies" view_mode="tree,form" />
+	<act_window id="booking_policies_view" name="Booking Policies" res_model="ba.booking.policies" view_mode="tree,form" />
+	<act_window id="group_booking_view" name="Group Booking" res_model="ba.group.booking" view_mode="tree,form" />
+	<act_window id="new_group_booking_view" name="New Group Booking" res_model="ba.group.booking" view_mode="form" />
+	<act_window id="booking_source_view" name="Booking Source" res_model="ba.booking.source" view_mode="tree,form" />
+	<act_window id="reservation_view" name="Reservation List" res_model="ba.reservation" view_mode="tree,form" />
+	<act_window id="new_reservation_view" name="New Reservation" res_model="ba.reservation" view_mode="form" />
+	<act_window id="booking_source_category_view" name="Booking Source Category" res_model="ba.booking.source.category" view_mode="tree,form"/>
+	<act_window id="stay_view" name="Stay" res_model="ba.stay" view_mode="tree,form" />
+
+
+	<menuitem id="menu_hotel" name="Hotel" />
+
+	<menuitem id="menu_view" name="Stay" parent="menu_hotel" action="stay_view" />	
+	<menuitem id="menu_reserve" name="Reservation" parent="menu_hotel" />
+	<!--<menuitem id="menu_customer" name="Customer" parent="menu_reserve" action="customer_view"/>-->
+	<menuitem id="menu_new_reservation" name="New Reservation" parent="menu_reserve" action="new_reservation_view"/>
+	<menuitem id="menu_new_group_reservation" name="New Group Reservation" parent="menu_reserve" action="new_group_booking_view"/>
+	<menuitem id="menu_reservation_list" name="Reservation List" parent="menu_reserve" action="reservation_view" />
+	<menuitem id="menu_group_reservation_list" name="Group Reservation List" parent="menu_reserve"
+action="group_booking_view"/>
+	<menuitem id="menu_reservation" name="Blocked Room List" parent="menu_reserve"/>
+	<menuitem id="menu_reservation" name="Checkin List" parent="menu_reserve"/>
+	<menuitem id="menu_reservation" name="Checkout List" parent="menu_reserve"/>
+	<menuitem id="menu_reservation" name="No-show List" parent="menu_reserve"/>
+	<menuitem id="menu_reservation" name="Upgrade Room" parent="menu_reserve"/>
+	<menuitem id="menu_reservation" name="Change Room" parent="menu_reserve"/>
+
+
+	<menuitem id="menu_night_audit" name="Night Audit" parent="menu_hotel" />
+	<menuitem id="menu_perform_night_audit" name="Perform Night Audit" parent="menu_night_audit" action="night_audit_view" />
+	<menuitem id="menu_old_night_audit" name="Old Night Audit" parent="menu_night_audit"/>
+
+
+	<menuitem id="menu_rates_packages" name="Rates and Packages" parent="menu_hotel" />
+	<menuitem id="menu_rate_type" name="Rate Type" parent="menu_rates_packages" action="rate_type_view" />
+	<menuitem id="menu_package" name="Package" parent="menu_rates_packages" action="packages_view" />
+	<menuitem id="menu_amenities" name="Amenities" parent="menu_rates_packages" action="amenities_view" />
+	<menuitem id="menu_booking_policies" name="Booking Policies" parent="menu_rates_packages" action="booking_policies_view" />
+	<menuitem id="menu_cancellation_policies" name="Cancellation Policies" parent="menu_rates_packages" action="cancellation_policies_view" />
+
+
+	<menuitem id="menu_configuration" name="Configurations" parent="menu_hotel" />
+	<menuitem id="menu_hotel_setting" name="Settings" parent="menu_configuration" action="hotel_settings_view"/>
+
+
+	<menuitem id="menu_room" name="Room" parent="menu_configuration" action="room_view" />
+	<menuitem id="menu_floor" name="Floor" parent="menu_configuration" action="floor_view" />
+	<menuitem id="menu_section" name="Section" parent="menu_configuration" action="section_view" />
+
+	<menuitem id="menu_facilities" name="Facilties" parent="menu_configuration" action="facilities_view" />
+	<menuitem id="menu_room_type" name="Room Type" parent="menu_configuration" action="room_type_view" />
+	<menuitem id="menu_booking_source" name="Booking Source" parent="menu_configuration" action="booking_source_view" />
+	<menuitem id="menu_booking_source_category" name="Booking Source Category" parent="menu_configuration" action="booking_source_category_view"/>
+</odoo>
