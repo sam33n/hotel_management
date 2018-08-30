@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+<odoo>
+    <data>
+    <record id="action_reservation_reference_view" model="ir.ui.view">
+	<field name="name">Reservation Ref</field>
+	<field name="model">sale.order</field>
+	<field name="inherit_id" ref="sale.view_order_form" />
+	<field name="arch" type="xml">
+	    <xpath expr="//field[@name='partner_id']" position="after">
+		    <field name="reservation_id" string="Reservation ID"/>
+		
+	    </xpath>	
+	</field>
+    </record>
+    </data>
+</odoo>

@@ -621,6 +621,8 @@
 			    <field name="reservation_status"/>
 
 			    <field name="amount"/>
+		    	<button name="action_sale_order_info" string="Sale Order Info" type="object" class="oe_highlight"/> 
+			 
 		    </group>
 		</group>
 		<notebook>
